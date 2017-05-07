@@ -1,7 +1,12 @@
 (function() {
   'use strict';
 
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
+
 })();
+
+$(document).ready(function(){
+  $('.menu__btn').click(function(){
+    $(this).toggleClass('open');
+    $('.nav_pages').toggleClass('open');
+  });
+});

@@ -1,0 +1,14 @@
+extends ../layout
+
+block variables
+	- var title = 'About'
+	- var page = 'about'
+
+block content
+	.wrapper
+		.maincontent
+			include ../sections/header
+			.about__wrap
+				include ./about/about
+				include ./about/skills
+			include ./about/contacts

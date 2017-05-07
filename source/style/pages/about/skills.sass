@@ -1,0 +1,51 @@
+.skills__text
+	margin-bottom: 50px
+
+.skills__title
+	+title('medium')
+	margin: 0 auto
+	margin-bottom: 15px
+	max-width: 340px
+
+.skills__item
+	&:nth-child(2)
+		.skills-group__item
+			&:nth-child(1), &:nth-child(4)
+				opacity: .6
+
+.skills-group__list
+	display: flex
+	flex-flow: row wrap
+	margin-bottom: 30px
+
+.skills-group__item
+	position: relative
+	display: inline-block
+	margin-right: 30px
+	margin-bottom: 10px
+	&:last-child
+		margin-left: 0
+
+.skills-group__title
+	+title('small')
+	text-align: left
+	margin-bottom: $m-item
+
+.skills-group__circle
+	width: 100px
+	height: 100px
+	display: block
+	fill: transparent
+	stroke-width: 15px
+.skills-group__name
+	position: absolute
+	width: 65%
+	text-align: center
+	font-size: 12px
+	color: $c-or
+	+centered
+.skills-group__circle-under
+	stroke: #dfdcd5
+.skills-group__circle-above
+	stroke: $c-or
+	transition: all 1.5s linear

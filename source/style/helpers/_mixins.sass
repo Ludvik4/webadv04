@@ -1,0 +1,99 @@
+//media
+=desktop
+	@media (max-width: 1200px)
+		@content
+=laptop
+	@media (max-width: 992px)
+		@content
+=tablet
+	@media (max-width: 768px)
+		@content
+=phone
+	@media (max-width: 480px)
+		@content
+
+=centered($axis: 'both')
+	position: absolute
+	@if ($axis == 'both')
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	@if $axis == 'x'
+		left: 50%
+		transform: translateX(-50%)
+	@if $axis == 'y'
+		top: 50%
+		transform: translateY(-50%)
+
+%clearfix
+	&:after
+		content: ""
+		display: block
+		clear: both
+
+=title($size: 'big')
+	text-align: center
+	text-transform: uppercase
+	font-family: $sansus
+	margin-bottom: 20px
+	position: relative
+	&:after, &:before
+		content: ""
+		background-size: contain
+		display: block
+		+centered('y')
+		@if $size == 'big'
+			text-transform: uppercase
+			height: 20px
+			width: 30px
+		@if $size == 'medium'
+			width: 30px
+			height: 15px
+		@if $size == 'small'
+			height: 0px
+	&:before
+		right: 100%
+		background: url('../img/title-point.png') no-repeat
+	&:after
+		left: 100%
+		background: url('../img/title-point-r.png') no-repeat
+	@if $size == 'big'
+		font-size: 63px
+		color: $c-grey-d
+		+phone
+			font-size: 36px
+	@if $size == 'medium'
+		color: $c-grey
+		font-size: 35px
+		+phone
+			font-size: 30px
+	@if $size == 'small'
+		font-family: $roboto-m
+		font-size: 28px
+		color: $c-grey
+		text-transform: none
+
+=transition
+	transition: $transition
+
+=dark-gradient
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		bottom: 0px
+		left: 0px
+		right: 0px
+		height: 200px
+		z-index: 1
+		background: linear-gradient(to top, rgba(0,0,0,0.7)0%,rgba(2,2,2,0)100%)
+
+=column
+	flex: 1 1 364px
+
+=abs-cover
+	position: absolute
+	top: 0px
+	left: 0
+	bottom: 0px
+	right: 0

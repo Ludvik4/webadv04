@@ -1,0 +1,25 @@
+.socials
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	z-index: 1
+	&__item
+		margin: 0 $m-p
+	&__svg
+		max-width: 30px
+		max-height: 26px
+		fill: rgba(255, 255, 255, .5)
+		transition: $transition
+		&:hover
+			fill: rgba(255, 255, 255, .8)
+	&_welcome
+		margin-bottom: $m-section
+	&_header
+		position: absolute
+		top: 10px
+		left: 10px
+		.socials__svg
+			fill: $white
+			&:hover
+				fill: $c-or

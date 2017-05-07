@@ -1,0 +1,13 @@
+header(class='header ' + `header_${page}`)
+	+socials('header', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+	include ./menu
+	include ./user
+	a.arrow.arrow_down(href=`#${page}`)
+		svg.arrow__svg
+			use(xlink:href='assets/img/sprite.svg#arrow_down')
+	svg.header__triangle(viewbox="0 0 2000 110" preserveAspectRatio="none")
+		polygon(points="0,0 0,110 2000,110 2000,0 1000,110")
+	svg.site-name__svg
+			use(xlink:href='assets/img/sprite.svg#portfolio_header')
+
+

@@ -1,0 +1,18 @@
+.about
+	display: flex
+	flex-direction: column
+	justify-content: start
+	align-items: center
+	padding: 0 75px 20px
+	&__title
+		+title('big')
+		display: inline-block
+		margin-bottom: 50px
+	&__subtitle
+		+title('medium')
+		margin: $m-section 0
+	&__text
+		font-size: $f-norm
+		font-family: $roboto
+		p
+			margin-bottom: $m-p

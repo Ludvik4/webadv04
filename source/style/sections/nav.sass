@@ -1,0 +1,24 @@
+.nav_index
+	&__list
+		display: flex
+		flex-direction: row
+	&__item
+		flex: 1
+		text-align: center
+		padding: 15px 0px
+		background: $c-or-d-t
+		transition: $transition
+		&:first-child
+			border-radius: 0 0 0 5px
+		&:last-child
+			border-radius: 0 0 5px 0
+		&:hover
+			background: $c-or-d
+
+	&__link
+		display: block
+		color: $white
+		font-family: $roboto-m
+		transition: $transition
+		&:hover
+			color: $white
