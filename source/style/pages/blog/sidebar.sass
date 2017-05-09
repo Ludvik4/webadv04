@@ -1,0 +1,58 @@
+$sb-width: 300px
+.sidebar
+	width: 315/1200*100%
+	padding-left: 30px
+	text-align: right
+	transition: $transition
+	+tablet
+		width: $sb-width
+		margin-left: -$sb-width
+		padding-left: 0
+		&.active
+			margin-left: 0
+	&__list
+		&_fixed
+			position: fixed
+			width: 26.25%
+			top: 40px
+			transition: $transition
+			+tablet
+				width: $sb-width
+				height: 100%
+				top: 0
+				padding-left: 20px
+				padding-right: 40px
+				padding-top: 40px
+				background: $c-or-d-t
+				z-index: 5
+				.sidebar__btn
+					display: block
+	&__item
+		margin-bottom: $m-item
+		&.active
+			.sidebar__link
+				color: $c-or-d
+				font-family: $roboto-b
+				border-right: 2px solid $c-or-d
+				+tablet
+					border-right-color: $white
+					color: $white
+	&__link
+		color: $c-main
+		font-family: $roboto
+		font-size: $f-norm
+		padding: 10px 20px 13px 0
+		+tablet
+			color: $white
+	&__btn
+		position: absolute
+		top: 100px
+		left: 100%
+		z-index: 5
+		display: none
+		transition: $transition
+		&-svg
+			fill: $c-or-d-t
+			width: 70px
+			height: 70px
+			cursor: pointer

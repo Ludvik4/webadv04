@@ -2,7 +2,13 @@ extends ../layout
 
 block content
 	- var title = 'Blog'
+	- var page = 'blog'
 
 	.wrapper
 		.maincontent
-			include ../sections/header
+			include ./blog/header_sidebar
+			.blog
+				include ./blog/sidebar
+				include ./blog/content
+
+		include ../sections/footer

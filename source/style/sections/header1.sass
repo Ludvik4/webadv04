@@ -1,7 +1,7 @@
 .header
 	min-height: 100vh
 	position: relative
-	background: url('../img/bg.jpg') no-repeat
+	background: url('../img/bg.jpg') center center no-repeat
 	background-size: cover
 	+dark-gradient
 	&__triangle
@@ -12,8 +12,26 @@
 		z-index: 2
 		fill: $white
 		width: 100%
+		height: 70px
+	&_about
+		.header__triangle
+			display: none
+			@media (max-width: 620px)
+				display: block
+				fill: $c-about-right
+	&_blog
+		min-height: 60vh
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&:after
+			display: none
+
+
 .site-name__svg
-	+centered('both')
+	+centered('x')
+	top: -16%
 	width: 100%
 	height: 100%
 	fill: $c-or-tt
