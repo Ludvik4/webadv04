@@ -1,0 +1,12 @@
+footer.footer
+	.footer__text.footer-el
+		.footer__about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+		.footer__copy © #{name} | создано с любовью в LoftSchool | 2016
+	.footer__navigation.footer-el
+		+nav('footer', ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'], ['/works.html', '/about.html', '/blog.html', '/'])
+		+socials('footer', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+	.footer__contacts.footer-el
+		ul.footer-contacts__list
+			each contact, ndx in contacts
+				li.footer-contacts__item
+					.footer-contacts__text= contact[1]

@@ -10,3 +10,9 @@ $(document).ready(function(){
     $('.nav_pages').toggleClass('open');
   });
 });
+
+
+//google maps
+$(function () {
+  initMap();
+});

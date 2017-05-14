@@ -5,11 +5,16 @@ block variables
 	- var page = 'about'
 
 block content
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuO4bimDe5gMGAPF6QAr2Id19LziWXsE")
 	.wrapper
 		.maincontent
 			include ../sections/header
 			.about__wrap
 				include ./about/about
 				include ./about/skills
-			#map
-			include ./about/contacts
+
+		include ./about/contacts
+
+		include ../sections/footer
+
+

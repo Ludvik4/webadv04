@@ -1,0 +1,57 @@
+
+.footer
+	display: flex
+	flex-flow: row wrap
+	align-items: stretch
+	justify-content: space-between
+	background: $c-footer
+	padding: 30px
+	padding-bottom: 0
+	//@media (max-width: 880px)
+		flex-flow: row-reverse wrap
+		.footer__text
+			flex: 3 1 500px
+
+	&-el
+		margin-bottom: $m-item
+		padding: 0 15px
+		font-family: $roboto-l-i
+		border-right: 1px solid $white-t
+		flex: 1 1 400px
+		&:last-child
+			border-right: none
+			padding-right: 0
+	&__text
+		width: 416/1200*100%
+		color: $white
+		//flex: 1.4 1 310px
+		+laptop
+			width: 100%
+	&__copy
+		font-family: $roboto-l-i
+		opacity: .65
+	&__about
+		margin-bottom: $m-p
+	&__navigation
+		//width: 465/1200*100%
+		//flex: 2 1 400px
+		flex: 1.5 1 340px
+		font-family: $roboto
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: flex-start
+	&__contacts
+		flex: 1 1
+	&-contacts__list
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		color: $white
+		opacity: .65
+	&-contacts__item
+		margin-bottom: $m-p
+
+
+
+
