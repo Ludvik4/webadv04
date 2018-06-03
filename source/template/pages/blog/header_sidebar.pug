@@ -1,0 +1,13 @@
+header(class='header ' + `header_${page}`)
+	+socials('header', ['vk', 'github', 'in'], ['https://vk.com/kate_kro', 'https://github.com/Ludvik4', '#'])
+	include ../../sections/menu
+	.user_blog
+		.user__pic
+			img.user__img(src='assets/img/user.jpg')
+	svg.header__triangle(viewbox="0 0 2000 110" preserveAspectRatio="none")
+		polygon(points="0,0 0,110 2000,110 2000,0 1000,110")
+	.blog__title-wrap
+		h1.blog__title Блог
+		.blog__subtitle Статьи, которые я написала
+		svg.blog__title-svg
+			use(xlink:href='assets/img/sprite.svg#blog_header')

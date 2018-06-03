@@ -1,0 +1,23 @@
+.authorization
+	&__btn
+		position: absolute
+		top: 20px
+		right: 20px
+		+tablet
+			+centered('x')
+			width: 200px
+			text-align: center
+		&-link
+			padding: 10px 25px
+			display: block
+			border: 1px solid $white
+			border-radius: 5px
+			color: $white
+			font-size: $f-norm
+			transition: $transition
+			&:hover
+				background: $white-t
+				color: $c-or
+			+tablet
+				border-width: 2px
+				font-family: $roboto-b

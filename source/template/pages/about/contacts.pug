@@ -1,0 +1,10 @@
+.contacts
+	#map
+	.contacts__wrap
+		.contacts__title Контакты
+		ul.contacts__list
+			each contact, ndx in contacts
+				li.contacts__item
+					svg.contacts__svg
+						use(xlink:href=`assets/img/sprite.svg#${contact[0]}`)
+					.contacts__text= contact[1]

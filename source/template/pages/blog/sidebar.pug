@@ -1,0 +1,12 @@
+aside.sidebar.sidebar_blog
+	ul.sidebar__list
+		li.sidebar__btn
+			svg.sidebar__btn-svg(viewBox="0 0 8 40")
+				circle(cx="-15" cy="20" r="20")
+		each article, ndx in articles
+			-
+				var sbClass = ''
+				if (ndx == 0)
+				sbClass = 'active'
+			li(class= 'sidebar__item ' + sbClass)
+				a.sidebar__link(href=`#${article.id}`)= article.title

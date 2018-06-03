@@ -1,0 +1,14 @@
+mixin socials(className,socials, hrefs)
+	ul(class='socials ' + `socials_${className}`)
+		each social, ndx in socials
+			li(class='socials__item ' + `c-socials__item_${className}`)
+				a(class='socials__link ' + `socials__link_${social}` href=`${hrefs[ndx]}`, target='_blank')
+					svg(class='socials__svg ' + `socials__pic_${className}`)
+						use(xlink:href=`./assets/img/sprite.svg#${social}`)
+
+mixin nav(className, items, hrefs)
+	nav(class='nav ' + `nav_${className}`)
+		ul(class=`nav_${className}__list`)
+			each item, ndx in items
+				li(class=`nav_${className}__item`)
+					a(class=`nav_${className}__link` href=`${hrefs[ndx]}`)= item

@@ -1,0 +1,44 @@
+script.
+	var url1 = 'http://www.longservice.nsw.gov.au/__data/assets/image/0011/4250/home_bci_worker.jpg';
+
+	function loadImage(url) {
+		return new Promise(function(resolve, reject){
+			var image1 = new Image(300);
+
+			document.body.appendChild(image1);
+			image1.src = url;
+			image1.addEventListener('load', function () {
+				resolve();
+			});
+		});
+	}
+
+	Promise.all([
+		loadImage(url1),
+		loadImage(url1)
+	]).then(function(){
+
+	});
+	//2
+
+	function loadImage(url) {
+		return new Promise(function (resolve, reject) {
+			var image1 = new Image(300);
+
+			document.body.appendChild(image1);
+			image1.src = url;
+			image1.addEventListener('load', function () {
+				resolve();
+			});
+			image1.addEventListener('error', function () {
+				reject();
+			});
+		});
+	}
+
+	Promise.all([
+		loadImage(url1),
+		loadImage(url1)
+	]).then(function () {
+
+	});

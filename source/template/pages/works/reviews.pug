@@ -1,0 +1,43 @@
+section.section_reviews
+	.reviews__title-wrap
+		h2.reviews__title Что говорят обо мне
+		svg.reviews__svg
+			use(xlink:href="assets/img/sprite.svg#about_header")
+	.reviews
+		.reviews__col
+			.reviews__text
+				p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+			.reviews__author
+				.reviews__author-pic
+					img(src="assets/img/review-user1.jpg")
+				.reviews__author-about
+					.reviews__author-name Ковальчук Дмитрий
+					.reviews__author-occupation основатель Loftschool
+		.reviews__col
+			.reviews__text
+				p Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+			.reviews__author
+				.reviews__author-pic
+					img(src="assets/img/review-user2.jpg")
+				.reviews__author-about
+					.reviews__author-name Сабанцев Владимир
+					.reviews__author-occupation преподаватель
+
+	.reviews-form__wrap.blur__wrap
+		.blur
+		form.reviews-form
+			.reviews-form__title Связаться со мной
+			input.reviews-form__inp(required
+			='', placeholder='Имя', name='name', type='text')
+			input.reviews-form__inp(required
+			='', placeholder='Email', name='email',  type='email')
+			textarea.reviews-form__textarea(required
+			='', placeholder='Ваше сообщение', name='comment', type='text')
+			.reviews-form__footer
+				button.reviews-form__btn.review-form__sbmt(type="submit") Отправить
+				button.reviews-form__btn.reviews-form__reset(type="reset") Очистить
+
+	img.reviews__bg(src="assets/img/reviews_bg.png")
+	a.arrow.reviews__arrow(href="#works")
+		svg.arrow__svg
+			use(xlink:href="assets/img/sprite.svg#portf_arrow_up")

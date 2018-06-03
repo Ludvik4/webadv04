@@ -1,0 +1,95 @@
+.section_works
+
+.works__title
+	+title('big')
+	display: inline-block
+	&-wrap
+		position: relative
+		text-align: center
+		padding: 50px 0
+	&-svg
+		+title-pic
+
+.works
+	display: flex
+	flex-flow: row wrap
+	align-items: stretch
+	justify-content: space-between
+	&__name
+		+title('medium')
+	&__desc
+		color: $c-or-d
+		padding: 15px 0
+		width: 80%
+		text-align: center
+		border-top: 1px solid $c-grey-d
+		border-bottom: 1px solid $c-grey-d
+		margin-bottom: $m-item
+	&__link
+		display: block
+		padding: 12px 15px
+		background: $c-or
+		color: $white
+		border-radius: 7px
+		transition: $transition
+		+txt-icon
+		&:after
+			background-image: url('../img/sprite/link.svg')
+		&:hover
+			background: $c-or-d
+
+	&__col
+		display: flex
+		flex-direction: column
+		&_left
+			background: #f4f0e9
+			justify-content: center
+			align-items: center
+			padding: 30px
+			width: 50%
+			+tablet
+				flex: 1 1 300px
+		&_right
+			background: #ebe5db
+			height: 100vh
+			min-height: 600px
+			width: 50%
+			+tablet
+				flex: 1 1 500px
+	&__preview
+		height: 75%
+		padding: 30px 50px
+		display: flex
+		+flex-col-centr
+		&-img
+			max-width: 100%
+			max-height: 100%
+	&__trigger-wrap
+		height: 25%
+		display: flex
+	&__trigger
+		flex: 1
+		+flex-col-centr
+		position: relative
+		&-img
+			max-width: 100%
+			max-height: 85%
+	&__arrow
+		+abs100
+		z-index: 2
+		.arrow__svg
+			+centered('both')
+			fill: #fff
+			width: 50px
+			height: 50px
+			transition: $transition
+		&_down
+			background: rgba(211, 207, 176, .7)
+			&:hover
+				.arrow__svg
+					top: 60%
+		&_up
+			background: rgba(195, 190, 176, .7)
+			&:hover
+				.arrow__svg
+					top: 40%

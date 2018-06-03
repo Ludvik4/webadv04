@@ -1,0 +1,124 @@
+.section_reviews
+	background: #f1e7d2
+	padding-bottom: 155px
+.reviews
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+	position: relative
+	z-index: 2
+	margin-bottom: 60px
+	+tablet
+		margin-bottom: $m-item
+	&__title-wrap
+		position: relative
+		padding: 30px 0
+		text-align: center
+		width: 60%
+		margin: 0 auto 20px
+		max-width: 370px
+		min-width: 280px
+		+tablet
+			margin-bottom: 0
+	&__title
+		+title('big')
+		display: inline-block
+	&__svg
+		+title-pic
+
+	&__col
+		flex: 1 1 270px
+		max-width: 400px
+		padding: 50px 0px
+		text-align: left
+		background: url(../img/quote.png) top left no-repeat
+		&:first-child
+			margin-right: 40px
+		+tablet
+			padding: 20px 30px
+			margin-bottom: $m-item
+	&__text
+		color: $c-main
+		font-family: $roboto
+		margin-bottom: $m-item
+		text-align: justify
+	&__author
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		&-pic
+			margin-right: 20px
+			border-radius: 50%
+			overflow: hidden
+			width: 70px
+			height: 70px
+		&-about
+			color: $c-or
+		&-name
+			margin-bottom: $m-p
+			font-family: $roboto-b
+		&-desc
+			font-family: $roboto
+			margin-bottom: $m-p
+
+
+
+	&__bg
+		position: absolute
+		bottom: 0
+		left: 0%
+		right: 0%
+		width: 100%
+	&__arrow
+		&:hover
+			bottom: 50px
+
+
+
+.reviews-form__wrap
+	margin: 0 auto
+	width: 80%
+	max-width: 400px
+	min-width: 290px
+	margin-bottom: 30px
+	position: relative
+	overflow: hidden
+.blur
+	background: url("../images/reviewss-bg.jpg")
+	filter: blur(15px)
+	+abs-cover
+	z-index: 0
+
+.reviews-form
+	padding-top: 20px
+	border-radius: 5px
+	position: relative
+	z-index: 1
+	background: $c-or-tt
+.reviews-form__title
+	+title('medium')
+.reviews-form__inp, .reviews-form__textarea
+	border-radius: 15px
+	background: $white
+	width: 80%
+	margin: 0 auto
+	margin-bottom: 20px
+	padding: 15px 15px
+	display: block
+	box-sizing: border-box
+.reviews-form__inp
+.reviews-form__textarea
+	height: 200px
+	outline: none
+
+.reviews-form__footer
+	@extend.nav_index__list
+.reviews-form__btn
+	@extend.nav_index__item
+	background: $c-or-t
+	padding: 15px
+	&:first-child
+		border-right: 2px solid $white-t
+	&:hover
+		background: $c-or

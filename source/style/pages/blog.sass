@@ -1,0 +1,22 @@
+.blog
+	display: flex
+	flex-flow: row wrap
+	align-items: stretch
+	justify-content: space-between
+	padding-top: 60px
+	//header
+	&__title-wrap
+		position: relative
+		text-align: center
+		padding: 30px 0
+	&__title
+		+title('big')
+		color: $white
+	&__subtitle
+		font-size: $f-norm
+		font-family: $roboto
+		color: $white
+	&__title-svg
+		+title-pic
+	//content
+

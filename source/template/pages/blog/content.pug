@@ -1,0 +1,6 @@
+.blog__content
+	each article in articles
+		article.blog-article(id=`${article.id}` data-id=`${article.id}`)
+			h2.blog-article__title= article.title
+			.blog-article__date= article.date
+			.blog-article__text!= article.text

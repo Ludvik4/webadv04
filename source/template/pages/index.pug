@@ -1,7 +1,20 @@
-extends ../_template
+extends ../layout
 
 block variables
-  - var title = 'Home page2'
+	- var title = 'Авторизация'
+	- var page = 'index'
 
 block content
-  include ../common/_greating
+
+	.wrapper.wrapper_index
+		.maincontent.maincontent_index
+			.authorization__btn
+				a.authorization__btn-link(href="#") Авторизоваться
+			.flip-container.index__container
+				.flip-front
+					include ./index/welcome
+				.flip-back
+					include ./index/authorization
+
+		include ../sections/copyright
+
